@@ -1,0 +1,79 @@
+.gitattributes
+  s_bf501021a01ba5::t_304f9227a6fc80 9
+  s_bf501021a01ba5::t_9680c85cc4c5ca 6-8
+  s_bf501021a01ba5::t_18d0cf129cb343 10-12
+README.md
+  s_bf501021a01ba5::t_92ba9c52afb469 73-120,135-136,139,147,166
+  s_bf501021a01ba5::t_af65572dde5125 70-72
+  s_bf501021a01ba5::t_8cf52b9077785b 121-123,132-134
+  s_bf501021a01ba5::t_4d2a3088d1da31 137-138
+  s_bf501021a01ba5::t_6ca2fc2829b234 140-142,144-146
+  s_bf501021a01ba5::t_66888e74287d53 148-150,163-165
+  s_bf501021a01ba5::t_e2830babb396cc 167-169
+package-lock.json
+  s_85a205c6bafd2c::t_1d2d01f8b556ab 1-2279
+src-tauri/src/wifi_server.rs
+  s_7727f31ac6488d::t_29f8d4877030ea 1-356
+src/components/Reader.vue
+  s_a8819966b19ea9::t_247c050304bce9 1-326
+src/components/mobile/BrowsePanel.vue
+  s_7727f31ac6488d::t_0bf583b8007a0b 1-90
+src/main.js
+  s_7727f31ac6488d::t_327557d9c0a7e7 1-10
+src/styles/mobile.css
+  s_7727f31ac6488d::t_bb717d9f182925 1-367
+src/utils/platform.js
+  s_7727f31ac6488d::t_47e5384aef7761 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "1e056b705bbca1bd53eaa4934d32b08559c41da6",
+  "prompts": {},
+  "sessions": {
+    "s_7727f31ac6488d": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "01a00f70-640f-7ee0-9954-d63d51db348c",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "李海涛-wb0148 <lihaitao@gofo.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    },
+    "s_85a205c6bafd2c": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "721cf2ea-4bac-4715-99ec-e0d866df5835",
+        "model": "glm-5.3-flash"
+      },
+      "human_author": "李海涛-wb0148 <lihaitao@gofo.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    },
+    "s_a8819966b19ea9": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "bbff6055-28f0-4e2f-9cc2-135db6b723e1",
+        "model": "deepseek-v4-flash"
+      },
+      "human_author": "李海涛-wb0148 <lihaitao@gofo.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    },
+    "s_bf501021a01ba5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d0a2487b-9021-439f-9179-e0e9ba2522ad",
+        "model": "deepseek-flash"
+      },
+      "human_author": "李海涛-wb0148 <lihaitao@gofo.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    }
+  }
+}
