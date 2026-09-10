@@ -1,0 +1,226 @@
+.gitattributes
+  s_bf501021a01ba5::t_3a209ff6e20eed 1-15
+.gitignore
+  s_bf501021a01ba5::t_6f43d9a290d555 1-13
+LiteMD-设计文档.md
+  s_bf501021a01ba5::t_9a879dd29fca65 1-1049
+README.md
+  s_bf501021a01ba5::t_99e574df1ba0c6 1-181
+docs/demo.md
+  s_bf501021a01ba5::t_3da045ad1bb931 1-91
+docs/superpowers/plans/2026-08-25-litemd-android-build-plan.md
+  s_bf501021a01ba5::t_080c0523d34716 1-308
+docs/superpowers/specs/2026-08-25-litemd-android-design.md
+  s_bf501021a01ba5::t_3edfcd0380ea11 1-248
+index.html
+  s_bf501021a01ba5::t_2711d0aecfef9d 1-12
+package-lock.json
+  s_bf501021a01ba5::t_16360b1ff860c6 1-2279
+package.json
+  s_bf501021a01ba5::t_33e39f7d17035c 1-34
+scripts/collect_release.mjs
+  s_bf501021a01ba5::t_215ed7f58d0f94 1-45
+src-tauri/Cargo.lock
+  s_bf501021a01ba5::t_066b142982fa1d 1-5138
+src-tauri/Cargo.toml
+  s_bf501021a01ba5::t_70de5d0b03d561 1-32
+src-tauri/build.rs
+  s_bf501021a01ba5::t_ae594c53574ef7 1-3
+src-tauri/capabilities/default.json
+  s_bf501021a01ba5::t_28449f8ef9438c 1-17
+src-tauri/gen/android/.editorconfig
+  s_bf501021a01ba5::t_a1b33f8b68c05d 1-12
+src-tauri/gen/android/.gitignore
+  s_bf501021a01ba5::t_c5e67348ee1dad 1-20
+src-tauri/gen/android/app/.gitignore
+  s_bf501021a01ba5::t_b6c38076339850 1-6
+src-tauri/gen/android/app/build.gradle.kts
+  s_bf501021a01ba5::t_66599aed5dbd5f 1-72
+src-tauri/gen/android/app/proguard-rules.pro
+  s_bf501021a01ba5::t_ea58a71614e9a3 1-28
+src-tauri/gen/android/app/src/main/AndroidManifest.xml
+  s_bf501021a01ba5::t_14fd69864710b0 1-60
+src-tauri/gen/android/app/src/main/java/com/litemd/reader/FileOpenerPlugin.kt
+  s_bf501021a01ba5::t_9d7de6d0e46607 1-315
+src-tauri/gen/android/app/src/main/java/com/litemd/reader/MainActivity.kt
+  s_bf501021a01ba5::t_b2b3151a9d4e3e 1-11
+src-tauri/gen/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml
+  s_bf501021a01ba5::t_bed9d32938651d 1-30
+src-tauri/gen/android/app/src/main/res/drawable/ic_launcher_background.xml
+  s_bf501021a01ba5::t_97329c7b3b9be8 1-170
+src-tauri/gen/android/app/src/main/res/layout/activity_main.xml
+  s_bf501021a01ba5::t_5a38b3ca8317d9 1-18
+src-tauri/gen/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+  s_bf501021a01ba5::t_07ad6d8d2fffe9 1-5
+src-tauri/gen/android/app/src/main/res/values-night/themes.xml
+  s_bf501021a01ba5::t_df421ae6057228 1-6
+src-tauri/gen/android/app/src/main/res/values/colors.xml
+  s_bf501021a01ba5::t_df0e4233bb25ae 1-10
+src-tauri/gen/android/app/src/main/res/values/ic_launcher_background.xml
+  s_bf501021a01ba5::t_785b8f454402a2 1-4
+src-tauri/gen/android/app/src/main/res/values/strings.xml
+  s_bf501021a01ba5::t_aa04de49b5debb 1-4
+src-tauri/gen/android/app/src/main/res/values/themes.xml
+  s_bf501021a01ba5::t_6a09099a1a509f 1-6
+src-tauri/gen/android/app/src/main/res/xml/file_paths.xml
+  s_bf501021a01ba5::t_d01038ea78d01d 1-5
+src-tauri/gen/android/build.gradle.kts
+  s_bf501021a01ba5::t_b8d662608f7a2c 1-22
+src-tauri/gen/android/buildSrc/build.gradle.kts
+  s_bf501021a01ba5::t_81e52474095a7f 1-23
+src-tauri/gen/android/buildSrc/src/main/java/com/litemd/reader/kotlin/BuildTask.kt
+  s_bf501021a01ba5::t_bc6e407e4ffa0c 1-68
+src-tauri/gen/android/buildSrc/src/main/java/com/litemd/reader/kotlin/RustPlugin.kt
+  s_bf501021a01ba5::t_c2eec4ce5375dd 1-85
+src-tauri/gen/android/gradle.properties
+  s_bf501021a01ba5::t_5acf80446b2c89 1-28
+src-tauri/gen/android/gradle/wrapper/gradle-wrapper.properties
+  s_bf501021a01ba5::t_cc958d34b9b4c9 1-6
+src-tauri/gen/android/gradlew
+  s_bf501021a01ba5::t_a69d42a3bf0e9d 1-185
+src-tauri/gen/android/gradlew.bat
+  s_bf501021a01ba5::t_a465a310673372 1-89
+src-tauri/gen/android/settings.gradle
+  s_bf501021a01ba5::t_1a61d8c37be973 1-3
+src-tauri/icons/android/mipmap-anydpi-v26/ic_launcher.xml
+  s_bf501021a01ba5::t_96524e5e672cf8 1-5
+src-tauri/icons/android/values/ic_launcher_background.xml
+  s_bf501021a01ba5::t_d66a63497bc1d7 1-4
+src-tauri/src/commands/bookmarks.rs
+  s_bf501021a01ba5::t_eff40bc1eec60d 1-39
+src-tauri/src/commands/file.rs
+  s_bf501021a01ba5::t_5e9c9fc9534b12 1-194
+src-tauri/src/commands/mod.rs
+  s_bf501021a01ba5::t_b88577f6d3d5cf 1-6
+src-tauri/src/commands/preferences.rs
+  s_bf501021a01ba5::t_932447c1e595ea 1-13
+src-tauri/src/commands/progress.rs
+  s_bf501021a01ba5::t_e5271be8874a8f 1-28
+src-tauri/src/commands/recent.rs
+  s_bf501021a01ba5::t_212ba5175a7c6b 1-51
+src-tauri/src/commands/window.rs
+  s_bf501021a01ba5::t_998fe288ce4884 1-13
+src-tauri/src/file_opener.rs
+  s_bf501021a01ba5::t_ff3752ba219a68 1-47
+src-tauri/src/lib.rs
+  s_bf501021a01ba5::t_1a1161fd204895 1-138
+src-tauri/src/main.rs
+  s_bf501021a01ba5::t_f472049a6147b7 1-6
+src-tauri/src/storage/bookmarks.rs
+  s_bf501021a01ba5::t_fe14b82e488b51 1-52
+src-tauri/src/storage/mod.rs
+  s_bf501021a01ba5::t_a49f2dad545af7 1-48
+src-tauri/src/storage/preferences.rs
+  s_bf501021a01ba5::t_48007b4e032340 1-94
+src-tauri/src/storage/progress.rs
+  s_bf501021a01ba5::t_3fa2b111c441fd 1-35
+src-tauri/src/storage/recent.rs
+  s_bf501021a01ba5::t_345e56fde9a59b 1-50
+src-tauri/src/storage/window.rs
+  s_bf501021a01ba5::t_9ccb94bf452d6f 1-33
+src-tauri/src/utils/hash.rs
+  s_bf501021a01ba5::t_2727b825f7ce79 1-8
+src-tauri/src/utils/mod.rs
+  s_bf501021a01ba5::t_f546f867deb442 1-2
+src-tauri/src/utils/path.rs
+  s_bf501021a01ba5::t_78889f4c638058 1-17
+src-tauri/src/wifi_server.rs
+  s_bf501021a01ba5::t_cddf9d4a74388a 1-356
+src-tauri/tauri.conf.json
+  s_bf501021a01ba5::t_9483e1ed1ebfc3 1-57
+src/App.vue
+  s_bf501021a01ba5::t_30d43f0ecf517e 1-439
+src/components/ContextMenu.vue
+  s_bf501021a01ba5::t_a9b5dc09f5a310 1-29
+src/components/Reader.vue
+  s_bf501021a01ba5::t_e9d62a7152435c 1-326
+src/components/SearchBar.vue
+  s_bf501021a01ba5::t_c2514ce71497bb 1-65
+src/components/SettingsPanel.vue
+  s_bf501021a01ba5::t_e0baf1f6e93153 1-155
+src/components/Sidebar.vue
+  s_bf501021a01ba5::t_d548c116bfe96a 1-55
+src/components/StatusBar.vue
+  s_bf501021a01ba5::t_9c69913427c4d0 1-33
+src/components/TopBar.vue
+  s_bf501021a01ba5::t_0fdc90ff08c6f3 1-51
+src/components/mobile/BrowsePanel.vue
+  s_bf501021a01ba5::t_3e8104aca50758 1-90
+src/components/mobile/MobileLayout.vue
+  s_bf501021a01ba5::t_5a26f7517c2eac 1-83
+src/components/mobile/WifiPanel.vue
+  s_bf501021a01ba5::t_1b09f15a5b1c89 1-82
+src/components/sidebar/BookmarkList.vue
+  s_bf501021a01ba5::t_1d62ec07cc1d83 1-96
+src/components/sidebar/Outline.vue
+  s_bf501021a01ba5::t_c08e2e491189e9 1-56
+src/components/sidebar/OutlineNode.vue
+  s_bf501021a01ba5::t_bb9237b8b98fd1 1-41
+src/components/sidebar/RecentFiles.vue
+  s_bf501021a01ba5::t_1dc339d3d3fee8 1-57
+src/composables/useContextMenu.js
+  s_bf501021a01ba5::t_422cd376f90c3c 1-21
+src/composables/useFiles.js
+  s_bf501021a01ba5::t_9cf6c496a03c55 1-66
+src/composables/useFont.js
+  s_bf501021a01ba5::t_709737d81890ad 1-43
+src/composables/useMarkdown.js
+  s_bf501021a01ba5::t_8139273343a954 1-126
+src/composables/useProgress.js
+  s_bf501021a01ba5::t_db5e9b8868ded2 1-92
+src/composables/useSearch.js
+  s_bf501021a01ba5::t_2857b14661523e 1-88
+src/composables/useTOC.js
+  s_bf501021a01ba5::t_c6fb2493e5a093 1-25
+src/composables/useTheme.js
+  s_bf501021a01ba5::t_98b8110c04e6f4 1-35
+src/locales/en-US.json
+  s_bf501021a01ba5::t_2fe752a2ce1da6 1-59
+src/locales/zh-CN.json
+  s_bf501021a01ba5::t_fd74615dc717e3 1-59
+src/main.js
+  s_bf501021a01ba5::t_b66f27d3f5cf87 1-10
+src/stores/app.js
+  s_bf501021a01ba5::t_ecbefd74f369db 1-29
+src/styles/global.css
+  s_bf501021a01ba5::t_a53580b518a4d6 1-695
+src/styles/highlight.css
+  s_bf501021a01ba5::t_32e02fa85621b3 1-107
+src/styles/mobile.css
+  s_bf501021a01ba5::t_be8f1185368c2d 1-367
+src/styles/reader.css
+  s_bf501021a01ba5::t_a52164457936b1 1-343
+src/styles/variables.css
+  s_bf501021a01ba5::t_7f4fe76ccca73e 1-54
+src/utils/format.js
+  s_bf501021a01ba5::t_cbe3e4c1c6a443 1-39
+src/utils/i18n.js
+  s_bf501021a01ba5::t_68e819b7e2cd37 1-18
+src/utils/markdownConfig.js
+  s_bf501021a01ba5::t_63e98f1fc10f3f 1-35
+src/utils/platform.js
+  s_bf501021a01ba5::t_694e098e31281f 1-3
+src/utils/slugify.js
+  s_bf501021a01ba5::t_1d5ded4259b838 1-12
+vite.config.js
+  s_bf501021a01ba5::t_fac8c3387d6dd0 1-18
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.23",
+  "base_commit_sha": "48e1b83b29ef207118dda4e036610a8cde88715b",
+  "prompts": {},
+  "sessions": {
+    "s_bf501021a01ba5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d0a2487b-9021-439f-9179-e0e9ba2522ad",
+        "model": "deepseek-flash"
+      },
+      "human_author": "Jett_Li <haitao.l@foxmail.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    }
+  }
+}
