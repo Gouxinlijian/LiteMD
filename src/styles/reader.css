@@ -1,0 +1,343 @@
+/* ===== 阅读区排版 ===== */
+.reader {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--bg-primary);
+}
+
+.reader-scroll {
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+}
+
+.reader-content {
+  max-width: var(--reader-max-width);
+  margin: 0 auto;
+  padding: 32px 40px 80px;
+  font-size: var(--reader-font-size);
+  line-height: var(--reader-line-height);
+  font-family: var(--reader-font-family, 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif);
+  user-select: text;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* 标题 */
+.reader-content h1,
+.reader-content h2,
+.reader-content h3,
+.reader-content h4,
+.reader-content h5,
+.reader-content h6 {
+  color: var(--text-heading);
+  line-height: 1.4;
+  margin: 1.6em 0 0.6em;
+  scroll-margin-top: 16px;
+  font-weight: 600;
+}
+
+.reader-content h1 {
+  font-size: 2em;
+  margin-top: 0.8em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reader-content h2 {
+  font-size: 1.5em;
+  padding-bottom: 0.25em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.reader-content h3 {
+  font-size: 1.25em;
+}
+
+.reader-content h4 {
+  font-size: 1.1em;
+}
+
+/* 段落与文本 */
+.reader-content p {
+  margin: 0.6em 0;
+}
+
+.reader-content strong {
+  font-weight: 700;
+}
+
+.reader-content del,
+.reader-content s {
+  color: var(--text-secondary);
+}
+
+/* 链接 */
+.reader-content a {
+  color: var(--link-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.reader-content a:hover {
+  border-bottom-color: var(--link-color);
+}
+
+/* 图片 */
+.reader-content img {
+  max-width: 100%;
+  display: block;
+  margin: 0.8em auto;
+  border-radius: 4px;
+  cursor: zoom-in;
+}
+
+/* 行内代码 */
+.reader-content code:not(pre code) {
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 0.9em;
+  color: var(--text-primary);
+  border: 1px solid var(--code-border);
+}
+
+/* 代码块 */
+.reader-content pre {
+  position: relative;
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  overflow-x: auto;
+  margin: 0.8em 0;
+}
+
+.reader-content pre code {
+  font-family: 'Cascadia Code', Consolas, 'Courier New', monospace;
+  font-size: 0.88em;
+  line-height: 1.6;
+  display: block;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 2px 8px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+.reader-content pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-color);
+}
+
+/* 引用块 */
+.reader-content blockquote {
+  margin: 0.8em 0;
+  padding: 0.4em 1em;
+  color: var(--text-secondary);
+  background: var(--blockquote-bg);
+  border-left: 4px solid var(--blockquote-border);
+  border-radius: 0 6px 6px 0;
+}
+.reader-content blockquote > *:first-child {
+  margin-top: 0;
+}
+.reader-content blockquote > *:last-child {
+  margin-bottom: 0;
+}
+
+/* 列表 */
+.reader-content ul,
+.reader-content ol {
+  padding-left: 1.6em;
+  margin: 0.5em 0;
+}
+
+.reader-content li {
+  margin: 0.25em 0;
+}
+
+.reader-content li > ul,
+.reader-content li > ol {
+  margin: 0;
+}
+
+/* 任务列表 */
+.reader-content .task-list-item {
+  list-style: none;
+  margin-left: -1.2em;
+}
+.reader-content .task-list-item input[type='checkbox'] {
+  margin-right: 0.4em;
+  accent-color: var(--accent-color);
+  vertical-align: -0.1em;
+}
+.reader-content .task-list-item.checked {
+  color: var(--text-secondary);
+  text-decoration: line-through;
+}
+
+/* 表格 */
+.reader-content table {
+  border-collapse: collapse;
+  margin: 0.8em 0;
+  width: 100%;
+  font-size: 0.95em;
+}
+
+.reader-content th,
+.reader-content td {
+  border: 1px solid var(--border-color);
+  padding: 0.4em 0.8em;
+  text-align: left;
+}
+
+.reader-content th {
+  background: var(--bg-secondary);
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.reader-content tr:nth-child(even) td {
+  background: var(--bg-secondary);
+}
+
+/* 分割线 */
+.reader-content hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 1.6em 0;
+}
+
+/* 脚注 */
+.reader-content .footnote-ref {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+.reader-content .footnotes {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.85em;
+  color: var(--text-secondary);
+}
+
+/* 文档内 [TOC] */
+.reader-content .toc {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 0.8em 0;
+}
+
+.reader-content .toc-title {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: var(--text-heading);
+}
+
+.reader-content .toc ul {
+  padding-left: 1.4em;
+  margin: 0;
+}
+
+.reader-content .toc li {
+  margin: 0.2em 0;
+}
+
+.reader-content .toc a {
+  color: var(--text-secondary);
+}
+.reader-content .toc a:hover {
+  color: var(--link-color);
+  border-bottom-color: transparent;
+}
+
+/* 渲染失败提示 */
+.reader-content .render-error {
+  color: #e5484d;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 13px;
+}
+
+/* 大文件渲染进度 */
+.rendering-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: color-mix(in srgb, var(--bg-primary) 78%, transparent);
+  backdrop-filter: blur(2px);
+  z-index: 5;
+}
+
+.rendering-overlay .spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border-color);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: litemd-spin 0.9s linear infinite;
+}
+
+@keyframes litemd-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rendering-overlay .rendering-text {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.rendering-overlay .rendering-bar {
+  width: 180px;
+  height: 4px;
+  background: var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rendering-overlay .rendering-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 2px;
+  transition: width 0.2s;
+}
+
+/* 搜索高亮 */
+.reader-content mark.search-hit {
+  background: var(--search-hit);
+  color: inherit;
+  padding: 0 1px;
+  border-radius: 2px;
+}
+.reader-content mark.search-hit.current {
+  background: var(--search-current);
+  color: #fff;
+}

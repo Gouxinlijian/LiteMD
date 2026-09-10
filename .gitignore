@@ -1,0 +1,13 @@
+node_modules/
+dist/
+target/
+src-tauri/target/
+*.local
+.DS_Store
+.idea/
+
+# 交付产物：安装包 / APK 体积大且每次替换，不入库
+release/
+
+# Tauri 每次构建自动重写
+src-tauri/gen/schemas/

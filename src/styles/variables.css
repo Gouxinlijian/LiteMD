@@ -1,0 +1,54 @@
+/* ===== 主题变量（浅色默认 / 深色） ===== */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f8fa;
+  --bg-sidebar: #f0f1f3;
+  --bg-topbar: #f7f8fa;
+  --bg-hover: rgba(0, 0, 0, 0.05);
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --text-heading: #111111;
+  --accent-color: #4a90d9;
+  --border-color: #e0e0e0;
+  --code-bg: #f5f5f5;
+  --code-border: #e8e8e8;
+  --blockquote-bg: #f7f9fc;
+  --blockquote-border: #4a90d9;
+  --link-color: #4a90d9;
+  --toc-active-bg: #e8f0fe;
+  --toc-active-color: #1a4f8b;
+  --search-hit: #ffe082;
+  --search-current: #ffab40;
+  --scrollbar: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-sidebar: #2d2d2d;
+  --bg-topbar: #252526;
+  --bg-hover: rgba(255, 255, 255, 0.06);
+  --text-primary: #d4d4d4;
+  --text-secondary: #999999;
+  --text-heading: #ffffff;
+  --accent-color: #569cd6;
+  --border-color: #3e3e42;
+  --code-bg: #2d2d2d;
+  --code-border: #3e3e42;
+  --blockquote-bg: #252526;
+  --blockquote-border: #569cd6;
+  --link-color: #569cd6;
+  --toc-active-bg: #2d4f6e;
+  --toc-active-color: #b9d7f7;
+  --search-hit: #8a6d1f;
+  --search-current: #c96f00;
+  --scrollbar: rgba(255, 255, 255, 0.2);
+}
+
+/* 阅读排版默认值（设置面板可动态覆盖） */
+:root {
+  --reader-font-size: 16px;
+  --reader-font-family: 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif;
+  --reader-line-height: 1.8;
+  --reader-max-width: 900px;
+}

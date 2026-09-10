@@ -1,0 +1,34 @@
+{
+  "name": "litemd",
+  "version": "1.0.0",
+  "description": "轻量级 Markdown 阅读器",
+  "main": "vite.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "build:win": "tauri build && node scripts/collect_release.mjs"
+  },
+  "keywords": [],
+  "author": "liHaiTao",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.11.4",
+    "@vitejs/plugin-vue": "^6.0.8",
+    "jsdom": "^29.1.1",
+    "vite": "^8.2.1"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.11.1",
+    "@tauri-apps/plugin-dialog": "^2.7.2",
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^15.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "pinia": "^4.0.3",
+    "qrcode": "^1.5.4",
+    "vue": "^3.5.41"
+  }
+}

@@ -1,0 +1,15 @@
+# 换行符规范化：避免 Windows 上克隆后 shell 脚本（尤其 gradlew）被转成 CRLF 而报 "bad interpreter"
+* text=auto
+
+*.sh    text eol=lf
+gradlew text eol=lf
+*.bat   text eol=crlf
+
+# 二进制资源不做换行转换
+*.jar binary
+*.png binary
+*.jpg binary
+*.bmp binary
+*.ico binary
+*.apk binary
+*.exe binary
