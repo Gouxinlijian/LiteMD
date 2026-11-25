@@ -1,0 +1,84 @@
+src/components/icons/AppIcon.vue
+  s_56cd3da4e5e45a::t_eccd56f75da55c 1-65
+src/locales/en-US.json
+  s_56cd3da4e5e45a::t_3bfb31b42a49ee 59-60
+  s_56cd3da4e5e45a::t_474e3be3f14257 26
+  s_56cd3da4e5e45a::t_411a014d6a6e48 61
+src/styles/mobile.css
+  s_56cd3da4e5e45a::t_85d6c0c1a17f4e 116,119
+  s_56cd3da4e5e45a::t_79cd78246155a9 94-95,97,99-100
+  s_56cd3da4e5e45a::t_40b98fe5be334e 61,66-67,78-79,82,103-104
+  s_56cd3da4e5e45a::t_f1dfba770275b5 295-298
+  s_56cd3da4e5e45a::t_3b843ee49373d5 40-42,48-49,57-58
+  s_56cd3da4e5e45a::t_ada442cd95de44 193-218
+  s_56cd3da4e5e45a::t_b2f5ab265d5d9f 381-383,385,391-399,402-404,407-418
+  s_56cd3da4e5e45a::t_9add4663ccc314 15-19,59,98
+src/components/SearchBar.vue
+  s_56cd3da4e5e45a::t_71a3f8dedd0009 89
+  s_56cd3da4e5e45a::t_80090cac78d85a 2,6,9,13-27,32-43,54,59,66-67,73-77,80,84-85,98
+src/composables/useSearch.js
+  s_56cd3da4e5e45a::t_d8de47f2821344 3-7,10-16,20,22-25,29-35,38-39,42,44-45,47,49,51-63,67-68,72-73,76-78,80-84,86-95,98-99,101,103-104,108,115-120,122,138
+  s_56cd3da4e5e45a::t_395b820b38da72 74-75
+index.html
+  s_56cd3da4e5e45a::t_28a393da806ba1 5
+README.md
+  s_56cd3da4e5e45a::t_58d387d42ad6d5 3,5,7,9,11-14,16-22,24,28-33,36,40-42,44-46,50-61,79-95,97,99,104-106,109-111,114,116,118,122-124,126,129,132,134,136,138-139,141,143,145,149,152-154,156-164,173,183,187,192
+src/components/mobile/BrowsePanel.vue
+  s_56cd3da4e5e45a::t_1fed53a5a63128 6
+  s_56cd3da4e5e45a::t_5036ea5adebe29 75-80
+src/locales/zh-CN.json
+  s_56cd3da4e5e45a::t_61c911e751cfd1 59-60
+  s_56cd3da4e5e45a::t_83908d19879cfb 61
+  s_56cd3da4e5e45a::t_52b5c5d2573dae 26
+src/components/mobile/MobileLayout.vue
+  s_56cd3da4e5e45a::t_89ba31e15e56d9 63
+  s_56cd3da4e5e45a::t_16665d69f952fe 76-78
+  s_56cd3da4e5e45a::t_c96123dda6ea3d 55
+  s_56cd3da4e5e45a::t_3b8fed86293aff 32-34,38-40,42-45
+  s_56cd3da4e5e45a::t_8fc5472378fcf7 11
+  s_bf501021a01ba5::t_c18e4eb3cfec8d 59
+src/App.vue
+  s_56cd3da4e5e45a::t_9f04ebbad78406 330-339
+src-tauri/Cargo.toml
+  s_56cd3da4e5e45a::t_6ea58f3ac1637f 31
+  s_56cd3da4e5e45a::t_9c4eced39bbe78 33
+src/composables/useProgress.js
+  s_56cd3da4e5e45a::t_1eca2cb9a796e9 100,102
+  s_56cd3da4e5e45a::t_5fa9da13be40c7 66-72,78-80,84-85,87
+  s_56cd3da4e5e45a::t_cc25c955414b79 18-19
+src-tauri/gen/android/app/build.gradle.kts
+  s_56cd3da4e5e45a::t_e37c828820d7f5 41
+src/components/mobile/WifiPanel.vue
+  s_56cd3da4e5e45a::t_aa48cec575c693 19,21
+  s_56cd3da4e5e45a::t_0ca20ab89ba12c 2,5,11-12,14-15,17-18,20,22-25,31-32,36-38,56-60,62-65,67,69-90,100,108,117-123
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.6",
+  "base_commit_sha": "72b6b5a141da68fd1c67c8b962516ea0b1723600",
+  "prompts": {},
+  "sessions": {
+    "s_56cd3da4e5e45a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "5b99dd34f0324439894c518fd9179677",
+        "model": "deepseek-v4.1-flash"
+      },
+      "human_author": "Jett_Li <haitao.l@foxmail.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    },
+    "s_bf501021a01ba5": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d0a2487b-9021-439f-9179-e0e9ba2522ad",
+        "model": "unknown"
+      },
+      "human_author": "Jett_Li <haitao.l@foxmail.com>",
+      "custom_attributes": {
+        "employee_email": "lihaitao@gofo.com"
+      }
+    }
+  }
+}
