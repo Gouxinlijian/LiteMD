@@ -12,9 +12,11 @@
 .m-topbar {
   display: flex;
   align-items: center;
-  gap: 2px;
-  padding: 8px 10px;
-  padding-top: calc(8px + env(safe-area-inset-top));
+  gap: 0;
+  padding: 6px 8px;
+  /* 安卓 WebView 的 env(safe-area-inset-top) 常返回 0（只反映刘海，不含状态栏），
+     这里用 max() 兜底一个标准状态栏高度，避免顶栏文字压到电池栏 */
+  padding-top: calc(6px + max(env(safe-area-inset-top), 24px));
   background: var(--bg-sidebar);
   border-bottom: 1px solid var(--border-color);
   flex-shrink: 0;
@@ -35,15 +37,16 @@
 }
 
 .m-btn {
-  width: 38px;
-  height: 38px;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: transparent;
   border: none;
-  border-radius: 8px;
-  font-size: 18px;
+  border-radius: 9px;
+  font-size: 16px;
   color: var(--text-secondary);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -51,14 +54,17 @@
 .m-btn:active {
   background: var(--bg-hover);
 }
+.m-btn svg {
+  display: block;
+}
 
-/* 底部浮动工具条 */
+/* 底部工具条：紧凑排布，尽量少占正文高度 */
 .m-dock {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 8px 12px;
-  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  padding: 3px 8px;
+  padding-bottom: calc(3px + env(safe-area-inset-bottom));
   background: var(--bg-sidebar);
   border-top: 1px solid var(--border-color);
   flex-shrink: 0;
@@ -69,11 +75,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 6px 18px;
+  gap: 1px;
+  padding: 3px 12px;
   background: transparent;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   color: var(--text-secondary);
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -85,11 +91,17 @@
   font-weight: 600;
 }
 .m-dock-icon {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
   line-height: 1;
+  opacity: 0.9;
+}
+.m-dock-btn.on .m-dock-icon {
+  opacity: 1;
 }
 .m-dock-label {
-  font-size: 11px;
+  font-size: 10px;
+  line-height: 1.15;
 }
 
 /* 正文区（Reader 填满中间） */
@@ -101,10 +113,10 @@
   height: 100%;
 }
 
-/* 移动端正文排版：全屏宽度，左右留边，底部给 dock 让位 + 安全区 */
+/* 移动端正文排版：全屏宽度，左右留边，底部留一点收尾空间（dock 在正常流里，不重叠） */
 .mobile-shell .reader-content {
   max-width: none !important;
-  padding: 20px 18px calc(96px + env(safe-area-inset-bottom));
+  padding: 20px 18px calc(48px + env(safe-area-inset-bottom));
 }
 
 /* 抽屉面板 */
@@ -176,6 +188,32 @@
 .mobile-shell.immersive .reader-content {
   padding-top: calc(20px + env(safe-area-inset-top));
   padding-bottom: calc(48px + env(safe-area-inset-bottom));
+}
+
+/* ===== 文内搜索栏（移动端） =====
+   桌面样式是 right 定位 + 固定 220px 输入框，窄屏上会撑出左侧屏幕外，
+   这里改成左右贴边、输入框自适应，并落在顶栏下方 */
+.search-bar.mobile {
+  top: calc(6px + max(env(safe-area-inset-top), 24px) + 42px);
+  left: 8px;
+  right: 8px;
+  padding: 5px 6px;
+  gap: 2px;
+}
+.search-bar.mobile .search-input {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+}
+.search-bar.mobile .search-count {
+  min-width: 38px;
+  font-size: 11px;
+}
+.search-bar.mobile .icon-btn {
+  width: 26px;
+  height: 26px;
+  font-size: 11px;
 }
 
 /* ===== 大纲/书签 页签 ===== */
@@ -254,6 +292,10 @@
 }
 .bp-tool {
   flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   padding: 9px 0;
   border: none;
   border-radius: 8px;
@@ -336,24 +378,44 @@
   padding: 6px;
 }
 .wifi-url {
-  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-top: 12px;
-  padding: 9px 30px 9px 10px;
+  padding: 9px 10px;
   border-radius: 8px;
   background: var(--bg-secondary);
   font-size: 12px;
-  word-break: break-all;
   text-align: left;
-  cursor: pointer;
   color: var(--text-primary);
+  cursor: pointer;
+}
+.wifi-url-text {
+  flex: 1;
+  min-width: 0;
+  word-break: break-all;
+  /* 允许长按手动复制：复制 API 不可用时的兜底手段 */
+  user-select: text;
+  -webkit-user-select: text;
 }
 .wifi-copy {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
+  flex-shrink: 0;
+  max-width: 42%;
+  text-align: right;
   color: var(--accent-color);
   font-weight: 600;
+  line-height: 1.35;
+}
+.wifi-copy.fail {
+  color: #e04a4a;
+}
+.wifi-emu {
+  margin: 8px 0 0;
+  font-size: 11px;
+  line-height: 1.6;
+  text-align: left;
+  word-break: break-all;
+  color: var(--text-secondary);
 }
 .wifi-close {
   width: 100%;

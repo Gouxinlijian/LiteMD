@@ -8,6 +8,7 @@ import RecentFiles from '../sidebar/RecentFiles.vue'
 import Outline from '../sidebar/Outline.vue'
 import BrowsePanel from './BrowsePanel.vue'
 import WifiPanel from './WifiPanel.vue'
+import AppIcon from '../icons/AppIcon.vue'
 
 const store = useAppStore()
 const { openDialog } = useFiles()
@@ -28,15 +29,21 @@ function togglePanel(name) {
   <div class="mobile-shell" :class="{ immersive: store.mobileImmersive }">
     <!-- 顶部栏：打开文件 + 文件名 + 搜索 + 主题 + 设置（沉浸时隐藏） -->
     <header class="m-topbar" v-show="!store.mobileImmersive">
-      <button class="m-btn" :title="t('openFile')" @click="openDialog">📂</button>
+      <button class="m-btn" :title="t('openFile')" @click="openDialog">
+        <AppIcon name="folderOpen" :size="18" />
+      </button>
       <span class="m-title" :title="store.currentFile?.path">
         {{ store.currentFile?.name || t('noFile') }}
       </span>
-      <button class="m-btn" :title="t('search')" @click="store.searchOpen = true">🔍</button>
-      <button class="m-btn" :title="t('theme')" @click="theme.toggle()">
-        {{ store.theme === 'dark' ? '☀️' : '🌙' }}
+      <button class="m-btn" :title="t('search')" @click="store.searchOpen = true">
+        <AppIcon name="search" :size="18" />
       </button>
-      <button class="m-btn" :title="t('settings')" @click="store.settingsOpen = true">⚙️</button>
+      <button class="m-btn" :title="t('theme')" @click="theme.toggle()">
+        <AppIcon :name="store.theme === 'dark' ? 'sun' : 'moon'" :size="18" />
+      </button>
+      <button class="m-btn" :title="t('settings')" @click="store.settingsOpen = true">
+        <AppIcon name="settings" :size="18" />
+      </button>
     </header>
 
     <!-- 正文区（插槽放 Reader） -->
@@ -45,15 +52,15 @@ function togglePanel(name) {
     <!-- 底部浮动工具条（沉浸时隐藏） -->
     <nav class="m-dock" v-show="!store.mobileImmersive">
       <button class="m-dock-btn" :class="{ on: panel === 'recent' }" @click="togglePanel('recent')">
-        <span class="m-dock-icon">📂</span>
+        <span class="m-dock-icon"><AppIcon name="clock" :size="17" /></span>
         <span class="m-dock-label">{{ t('recent') }}</span>
       </button>
       <button class="m-dock-btn" :class="{ on: panel === 'files' }" @click="togglePanel('files')">
-        <span class="m-dock-icon">🗂</span>
+        <span class="m-dock-icon"><AppIcon name="folder" :size="17" /></span>
         <span class="m-dock-label">{{ t('folder') }}</span>
       </button>
       <button class="m-dock-btn" :class="{ on: panel === 'outline' }" @click="togglePanel('outline')">
-        <span class="m-dock-icon">📋</span>
+        <span class="m-dock-icon"><AppIcon name="list" :size="17" /></span>
         <span class="m-dock-label">{{ t('outline') }}</span>
       </button>
     </nav>
@@ -66,7 +73,9 @@ function togglePanel(name) {
             <span class="m-panel-title">
               {{ panel === 'recent' ? t('recent') : panel === 'files' ? t('folder') : t('outline') }}
             </span>
-            <button class="m-btn" @click="panel = ''">✕</button>
+            <button class="m-btn" @click="panel = ''">
+              <AppIcon name="close" :size="16" />
+            </button>
           </div>
           <div class="m-panel-body">
             <RecentFiles v-if="panel === 'recent'" />

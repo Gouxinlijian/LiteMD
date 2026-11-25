@@ -324,11 +324,18 @@ function onMouseMove(e) {
 
 // ---------- 快捷键 ----------
 function onKeydown(e) {
-  const tag = e.target?.tagName
-  if (tag === 'INPUT' || tag === 'TEXTAREA') return
-
   const ctrl = e.ctrlKey || e.metaKey
   const key = e.key.toLowerCase()
+
+  // Ctrl+F 始终拦截：落在输入框里也不放行，避免触发 WebView 原生查找
+  if (ctrl && key === 'f') {
+    e.preventDefault()
+    store.searchOpen = true
+    return
+  }
+
+  const tag = e.target?.tagName
+  if (tag === 'INPUT' || tag === 'TEXTAREA') return
 
   switch (true) {
     case e.key === 'Escape':
@@ -343,10 +350,6 @@ function onKeydown(e) {
     case ctrl && key === 'o':
       e.preventDefault()
       openDialog()
-      return
-    case ctrl && key === 'f':
-      e.preventDefault()
-      store.searchOpen = true
       return
     case ctrl && key === 'j':
       e.preventDefault()

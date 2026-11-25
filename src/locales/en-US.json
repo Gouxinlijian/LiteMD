@@ -23,6 +23,7 @@
   "searchPlaceholder": "Search in document…",
   "prevMatch": "Previous match",
   "nextMatch": "Next match",
+  "searchTruncated": "Too many matches, highlighting only first",
   "language": "Language",
   "themeLight": "Light",
   "themeDark": "Dark",
@@ -55,5 +56,7 @@
   "computerTransfer": "Receive from PC",
   "wifiTip": "Connect PC and phone to the same Wi-Fi, open the URL below or scan the QR code in a PC browser to send .md docs",
   "wifiOff": "Wi-Fi not connected. Check the network and retry.",
-  "stopAndClose": "Stop & Close"
+  "stopAndClose": "Stop & Close",
+  "copyFailed": "Copy failed, long-press the address",
+  "wifiEmuHint": "If it won't connect (required on emulators): run adb forward tcp:{port} tcp:{port} on the PC, then open http://127.0.0.1:{port}/?k={token}"
 }

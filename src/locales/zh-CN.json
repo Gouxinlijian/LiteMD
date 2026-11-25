@@ -23,6 +23,7 @@
   "searchPlaceholder": "搜索当前文档…",
   "prevMatch": "上一个匹配",
   "nextMatch": "下一个匹配",
+  "searchTruncated": "命中过多，仅高亮前",
   "language": "语言",
   "themeLight": "浅色",
   "themeDark": "深色",
@@ -55,5 +56,7 @@
   "computerTransfer": "电脑传书",
   "wifiTip": "电脑与手机连同一 Wi-Fi，用电脑浏览器打开下方网址或扫码，即可把 .md 文档发到手机",
   "wifiOff": "手机未连接 Wi-Fi，请检查网络后重试",
-  "stopAndClose": "关闭并停止服务"
+  "stopAndClose": "关闭并停止服务",
+  "copyFailed": "复制失败，长按地址手动复制",
+  "wifiEmuHint": "连不上时（模拟器必须）：电脑执行 adb forward tcp:{port} tcp:{port}，再访问 http://127.0.0.1:{port}/?k={token}"
 }

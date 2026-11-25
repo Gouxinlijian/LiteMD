@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import { invoke } from '@tauri-apps/api/core'
 import { useFiles } from '../../composables/useFiles'
 import { useI18n } from '../../utils/i18n'
+import AppIcon from '../icons/AppIcon.vue'
 
 const emit = defineEmits(['opened', 'wifi'])
 const { loadFile } = useFiles()
@@ -71,8 +72,12 @@ onMounted(reload)
 <template>
   <div class="browse-panel">
     <div class="bp-toolbar">
-      <button class="bp-tool" :disabled="loading" @click="chooseFolder">📁 {{ t('chooseFolder') }}</button>
-      <button class="bp-tool wifi" :disabled="loading" @click="emit('wifi')">📡 {{ t('computerTransfer') }}</button>
+      <button class="bp-tool" :disabled="loading" @click="chooseFolder">
+        <AppIcon name="folder" :size="16" /><span>{{ t('chooseFolder') }}</span>
+      </button>
+      <button class="bp-tool wifi" :disabled="loading" @click="emit('wifi')">
+        <AppIcon name="wifi" :size="16" /><span>{{ t('computerTransfer') }}</span>
+      </button>
     </div>
 
     <template v-if="hasFolder">

@@ -15,6 +15,8 @@ let dirty = false
 let sessionStart = 0
 let boundFile = null // start 时绑定的文件，进度始终归属该文件
 let cached = { scrollTop: 0, percent: 0 }
+let scrollTarget = null // 已绑定滚动的容器
+let scrollHandler = null // 已绑定的滚动回调，stop 时需要解绑
 
 function appStore() {
   return useAppStore()
@@ -61,17 +63,28 @@ function restore(scrollEl) {
   }
 }
 
+/** 解绑上一次的滚动监听：否则每次切换文件都会多留一个回调，滚动时成倍叠加 */
+function stopListening() {
+  if (scrollTarget && scrollHandler) scrollTarget.removeEventListener('scroll', scrollHandler)
+  scrollTarget = null
+  scrollHandler = null
+}
+
 /** 启动滚动监听与定时保存；onScroll 用于外部同步章节高亮等 UI 状态 */
 function start(scrollEl, onScroll) {
   boundFile = appStore().currentFile
   sessionStart = Date.now()
 
-  scrollEl.addEventListener('scroll', () => {
+  stopListening()
+  scrollTarget = scrollEl
+  scrollHandler = () => {
     onScroll?.(scrollEl)
     clearTimeout(scrollTimer)
     scrollTimer = setTimeout(() => capture(scrollEl), 500)
-  })
+  }
+  scrollEl.addEventListener('scroll', scrollHandler)
 
+  clearInterval(saveTimer)
   saveTimer = setInterval(save, 3000)
   window.addEventListener('blur', flush)
   window.addEventListener('beforeunload', flush)
@@ -84,7 +97,9 @@ function flush() {
 
 /** 停止监听并保存（切换文件时调用） */
 function stop() {
+  stopListening()
   clearInterval(saveTimer)
+  saveTimer = null
   clearTimeout(scrollTimer)
   flush()
 }
